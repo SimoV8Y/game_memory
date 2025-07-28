@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game | Mohammed x Youssef</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Page de démarrage -->
+    <div id="startPage" class="start-page">
+        <header>
+            <h1>Bienvenue dans le jeu</h1>
+        </header>
+        <main>
+            <div class="gamestart-container">
+                <div class="player-info">
+                    <h3>Donner le nom du joueur :</h3>
+                    <input type="text" id="playerName" placeholder="Entrez votre nom">
+                    <div class="level-select">
+                        <h3>Choisissez la partie de cours :</h3>
+                        <select id="levelSelect">
+                        </select>
+                    </div>
+                    <button id="startGame">Commencer le jeu</button>
+                </div>
+            </div>
+            <div class="ErrourNom">
+                <p id="ErrourNom">Veuillez entrez votre Nom !!</p>
+                <button class="ErrourNomclose">OK</button>
+            </div>
+        </main>
+        <footer>
+            <p>Créé par Mohammed Houzmali et Youssef Benaissa - Jeu de Mémoire - 2025</p>
+        </footer>
+    </div>
+
+    <!-- Page de jeu (masquée initialement) -->
+    <div id="gamePage" class="game-page" style="display: none;">
+        <header>
+            <h1>Jeu de Mémoire</h1>
+        </header>
+        <main>
+            <div class="information-de-joueur">
+                <div class="name">
+                    Joueur: <span id="playerNameDisplay"></span>
+                </div>
+                <div class="Errors">
+                    Erreurs: <span id="errorCount">0</span>
+                </div>
+                <div class="score">
+                    Score: <span id="score">0</span>
+                </div>
+                <div class="timer">
+                    Temps: <span id="timer">00:00</span>
+                </div>
+            </div>
+            <div class="game-container">
+                <!-- Les cartes sont générées dynamiquement en JavaScript -->
+            </div>
+            <div class="next-level-container" style="display: none;">
+                <h3>Niveau terminé !</h3>
+                <p>Bravo ! Passer au niveau suivant ?</p>
+                <button id="nextLevelBtn">Niveau Suivant</button>
+
+            </div>
+            <div class="EnDContainer" style="display: none;">
+                <h3>Félicitations !</h3>
+                <p>Vous avez terminé tous les niveaux 👑</p>
+                <button id="Rejouer">Rejouer</button>
+            </div>
+        </main>
+        <footer>
+            <p>Créé par Mohammed Houzmali  - Jeu de Mémoire - 2025</p>
+        </footer>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
